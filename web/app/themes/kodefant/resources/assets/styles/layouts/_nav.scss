@@ -1,0 +1,60 @@
+// General Header Settings
+header.banner {
+  background-color: $background-nav;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+// The container of both brand and menu
+.banner .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// The Menu
+ul#menu-main-nav {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    .sub-menu {
+      position: absolute;
+      background-color: rgba($background-nav, 0.7);
+      color: white;
+      top: 1.5rem;
+      left: 0;
+      display: none;
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+//The Brand
+.brand {
+  font-family: $header-font;
+  font-size: 3rem;
+  font-weight: normal;
+  padding: 0.4rem;
+}
+
+.nav-primary {
+  display: none;
+
+  @include breakpoint(phablet) {
+    display: flex;
+  }
+}
