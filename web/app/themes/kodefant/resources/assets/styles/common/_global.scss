@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
 body {
   color: $black;
   background-color: $white;
@@ -11,30 +16,66 @@ body {
   grid-template-columns: 1fr;
 }
 
+a {
+  text-decoration: none;
+  color: $blue;
+}
+
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 300;
 }
 
 h2 {
   font-size: 2rem;
   color: rgb(221, 144, 0);
+
+  a {
+    color: rgb(221, 144, 0);
+  }
+}
+
+a:hover {
+  color: $orange;
+  text-decoration: underline;
+}
+
+h2 a:hover {
+  text-decoration: none;
+  border-bottom: 2px dotted $orange;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: $blue;
+}
+
+h4 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+h6 {
+  font-size: 1.2rem;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: $header-font;
   padding: 1rem 0;
 }
 
 p {
-  line-height: 30px;
+  line-height: $line-height;
   margin-bottom: 1rem;
-}
-
-a {
-  text-decoration: none;
 }
 
 // Grid Areas
@@ -52,13 +93,17 @@ header {
     margin: 0 $desktop-margin;
   }
 
-  ol,
+  ol {
+    list-style: decimal inside;
+  }
+
   ul {
     list-style: disc inside;
   }
 
   li {
     margin: 0.8rem;
+    line-height: 22px;
   }
 }
 
@@ -69,3 +114,4 @@ header {
 footer {
   grid-area: footer;
 }
+
