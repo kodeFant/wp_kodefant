@@ -101,3 +101,11 @@ add_filter('sage/template/app/data', function ($data) {
         'sf_submit_text' => esc_attr_x('Search', 'submit button', 'sage'),
     ];
 });
+
+add_filter('get_search_form', function () {
+    $data = collect(get_body_class())->reduce(function ($data, $class) {
+        return apply_filters("sage/template/{$class}/data", $data, '/partials/searchform.blade.php');
+    }, []);
+
+    return template('partials.searchform', $data);
+});

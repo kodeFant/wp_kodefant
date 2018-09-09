@@ -1,13 +1,38 @@
 // General Header Settings
+header {
+  transition: opacity 0.5s;
+}
+
 header.banner {
   background-color: $background-nav;
 
   a {
-    color: white;
+    color: $brand-primary;
     text-decoration: none;
 
-    &:hover {
-      color: $hover-color;
+    &:hover,
+    &:active {
+      color: $orange;
+    }
+  }
+  //The Brand
+  .brand {
+    font-family: $header-font;
+    font-size: 2.8rem;
+    padding: 0.2rem;
+    color: $orange;
+
+    @include breakpoint(phablet) {
+      margin-left: $tablet-margin;
+    }
+
+    @include breakpoint(tablet) {
+      margin-left: $desktop-margin;
+    }
+
+    &:hover,
+    &:active {
+      color: $white;
     }
   }
 }
@@ -15,8 +40,12 @@ header.banner {
 // The container of both brand and menu
 .banner .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+
+  @include breakpoint(phablet) {
+    justify-content: space-between;
+  }
 }
 
 // The Menu
@@ -28,12 +57,12 @@ ul#menu-main-nav {
     padding: 0.5rem 1rem;
     text-transform: uppercase;
     position: relative;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 400;
 
     .sub-menu {
       position: absolute;
-      background-color: rgba($background-nav, 0.7);
+      background-color: $background-nav;
       color: white;
       top: 1.5rem;
       left: 0;
@@ -43,18 +72,15 @@ ul#menu-main-nav {
   }
 }
 
-//The Brand
-.brand {
-  font-family: $header-font;
-  font-size: 3rem;
-  font-weight: normal;
-  padding: 0.4rem;
-}
-
 .nav-primary {
   display: none;
 
   @include breakpoint(phablet) {
+    margin-right: $tablet-margin;
     display: flex;
+  }
+
+  @include breakpoint(tablet) {
+    margin-right: $desktop-margin;
   }
 }

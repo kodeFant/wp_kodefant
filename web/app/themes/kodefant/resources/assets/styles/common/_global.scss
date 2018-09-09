@@ -1,11 +1,14 @@
 body {
+  color: $black;
   background-color: $white;
   font-family: $main-font;
   display: grid;
   grid-template-areas:
     "header"
+    "custom"
     "main-content"
     "footer";
+  grid-template-columns: 1fr;
 }
 
 h1 {
@@ -14,19 +17,24 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: rgb(221, 144, 0);
 }
 
 h1,
 h2,
 h3 {
-  font-family: $main-font;
+  font-family: $header-font;
   padding: 1rem 0;
 }
 
 p {
-  line-height: 1.58;
+  line-height: 30px;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 // Grid Areas
@@ -37,7 +45,21 @@ header {
 .wrap.container {
   grid-area: main-content;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 0 1rem;
+
+  @include breakpoint(tablet) {
+    margin: 0 $desktop-margin;
+  }
+
+  ol,
+  ul {
+    list-style: disc inside;
+  }
+
+  li {
+    margin: 0.8rem;
+  }
 }
 
 .content {

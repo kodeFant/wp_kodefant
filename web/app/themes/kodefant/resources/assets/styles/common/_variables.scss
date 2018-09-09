@@ -1,12 +1,19 @@
 /** Colors */
-$brand-primary:         #525ddc;
-$hover-color:             orange;
-$background-nav:          #333;
 $black: #333;
 $white: #fafafa;
+$orange: orange;
+$blue: #525ddc;
+$brand-primary:         $white;
+$hover-color:             $black;
+$background-nav:          $black;
 
 $main-font: 'Open Sans', sans-serif;
 $header-font: 'Poiret One', cursive;
+
+$navbar-height: 50.375px;
+
+$desktop-margin: 5rem;
+$tablet-margin: 2.5rem;
 
 /*********************
 BOX MODEL

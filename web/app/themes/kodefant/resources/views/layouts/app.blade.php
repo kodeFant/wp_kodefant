@@ -6,7 +6,7 @@
     @include('partials.header')
     <div class="wrap container" role="document">
       <div class="content">
-        <main class="main @if (is_front_page())landing @endif">
+        <main class="main">
           @yield('content')
         </main>
         @if (App\display_sidebar())

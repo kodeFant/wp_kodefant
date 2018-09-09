@@ -8,3 +8,5 @@
     </nav>
   </div>
 </header>
+@if (is_front_page()) @include('partials/landing-header') @endif
+
