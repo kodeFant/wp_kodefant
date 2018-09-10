@@ -85,3 +85,16 @@ img.aligncenter {
   background-color: rgba(gray, 0.2);
   padding: ($spacer / 3);
 }
+
+/** Search Form */
+
+.search-form {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+
+  .search-field {
+    width: 100%;
+  }
+}
