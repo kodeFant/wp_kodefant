@@ -68,8 +68,49 @@ ul#menu-main-nav {
       left: 0;
       display: none;
       padding-top: 0.5rem;
+      width: 10rem;
+
+      &:last-of-type {
+        padding-bottom: 0.3rem;
+      }
+
+      li.menu-item-has-children::after {
+        position: static;
+        content: "\f107";
+        color: rgba($blue, 0.7);
+        font: normal normal normal 14px/1 FontAwesome, sans-serif;
+        margin-left: 0.1rem;
+      }
+
+      a {
+        font-weight: 300;
+      }
+
+      li {
+        position: static;
+
+        .sub-menu {
+          background-color: $background-nav;
+          color: white;
+          top: 2rem;
+          left: 0;
+          padding-top: 0.5rem;
+          padding-left: 1rem;
+          z-index: 1;
+        }
+      }
     }
   }
+}
+
+.menu-item-has-children::after {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  content: "\f107";
+  color: rgba($orange, 0.7);
+  font: normal normal normal 14px/1 FontAwesome, sans-serif;
+  margin-left: 0.1rem;
 }
 
 .nav-primary {
