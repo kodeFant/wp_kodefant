@@ -70,7 +70,7 @@ img.aligncenter {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-  color: #000;
+  color: $black;
   background: #fff;
 }
 
@@ -88,13 +88,52 @@ img.aligncenter {
 
 /** Search Form */
 
-.search-form {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  position: relative;
+form.search-form input[type=search] {
+  padding: 10px;
+  font-size: 1.5rem;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: $white;
+  outline: none;
+  border-radius: 1rem 0 0 1rem;
+  font-family: $header-font;
+  -webkit-appearance: none;
 
-  .search-field {
-    width: 100%;
+  @include breakpoint(tablet) {
+    width: 80%;
   }
+}
+
+/* Style the submit button */
+
+form.search-form {
+  input[type=submit] {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background: $black;
+    color: $orange;
+    font-family: $header-font;
+    font-size: 1.5rem;
+    border: 1px solid grey;
+    border-left: none;
+    border-radius: 0 1rem 1rem 0;
+    cursor: pointer;
+
+    @include breakpoint(tablet) {
+      width: 20%;
+    }
+  }
+}
+
+form.search-form input[type=submit]:hover {
+  background: rgba($black, 0.9);
+}
+
+/* Clear floats */
+form.search-form::after {
+  content: "";
+  clear: both;
+  display: table;
 }

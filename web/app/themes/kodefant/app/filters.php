@@ -98,7 +98,7 @@ add_filter('sage/template/app/data', function ($data) {
         'sf_screen_reader_text' => _x('Search for:', 'label', 'sage'),
         'sf_placeholder' => esc_attr_x('Search &hellip;', 'placeholder', 'sage'),
         'sf_current_query' => get_search_query(),
-        'sf_submit_text' => esc_attr_x('Search', 'submit button', 'sage'),
+        'sf_submit_text' => esc_attr_x("Search", 'submit button', 'sage'),
     ];
 });
 
