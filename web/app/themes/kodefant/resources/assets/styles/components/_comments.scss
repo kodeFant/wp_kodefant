@@ -3,3 +3,17 @@
 // TODO: .comment-form p {}
 // TODO: .comment-form input {}
 // TODO: .comment-form textarea {}
+
+#comments ol.comment-list {
+  background-color: $gray;
+  list-style: none;
+  padding: 1rem;
+
+  img.avatar {
+    border-radius: 50%;
+  }
+
+  li.comment {
+    display: grid;
+  }
+}
