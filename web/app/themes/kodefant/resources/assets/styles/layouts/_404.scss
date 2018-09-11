@@ -1,6 +1,7 @@
 .error404 {
   .content {
     max-width: 100%;
+    display: block;
   }
 
   .nf404 {
@@ -19,6 +20,7 @@
 
       blockquote {
         width: 100%;
+        font-size: 1rem;
       }
 
       h1 {

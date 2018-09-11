@@ -11,9 +11,23 @@
 
   img.avatar {
     border-radius: 50%;
+    float: left;
+    margin: 0.3rem;
   }
 
   li.comment {
     display: grid;
+    border-bottom: 1px rgba($black, 0.2) dashed;
+    padding: 1rem;
+
+    // Nested comments
+    li.comment {
+      border-bottom: none;
+      padding: 0.3rem;
+      background-color: rgba($black, 0.1);
+      padding-bottom: 0;
+      margin-right: 0;
+      margin-left: 0.3rem;
+    }
   }
 }

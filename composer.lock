@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "768108629fbb48e19da3b0a83a399f2a",
+    "content-hash": "348161937d017d31fca12ccd63bdb757",
     "packages": [
         {
             "name": "afragen/github-updater",
@@ -463,6 +463,26 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields-font-awesome/"
         },
         {
+            "name": "wpackagist-plugin/akismet",
+            "version": "4.0.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/akismet/",
+                "reference": "tags/4.0.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.4.0.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/akismet/"
+        },
+        {
             "name": "wpackagist-plugin/better-font-awesome",
             "version": "1.7.1",
             "source": {
@@ -481,6 +501,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/better-font-awesome/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "8.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/8.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         }
     ],
     "packages-dev": [

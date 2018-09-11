@@ -107,11 +107,26 @@ header {
   }
 }
 
-.content {
-  align-self: center;
-}
-
 footer {
   grid-area: footer;
+}
+
+.content {
+  // Content Grid
+  display: grid;
+
+  // Other
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 2.5rem;
+  width: 90vw;
+  max-width: 100%;
+
+  @include breakpoint(tablet) {
+    grid-template-columns: minmax(20rem, 40rem) minmax(10rem, 20rem);
+
+    /* max-width: 40rem; */
+  }
 }
 

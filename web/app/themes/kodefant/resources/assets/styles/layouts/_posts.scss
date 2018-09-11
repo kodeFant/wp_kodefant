@@ -1,11 +1,103 @@
-.post {
-  .preamble {
-    color: $black;
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    padding-top: 0;
-    font-family: $main-font;
-    font-weight: 300;
+.post-template-default {
+  header {
+    h1 {
+      margin-top: 1rem;
+      padding-top: 0;
+      color: $dark-orange;
+    }
+
+    .preamble {
+      color: $black;
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-top: 0;
+      font-family: $main-font;
+      font-weight: 300;
+    }
+
+    .post-meta-category {
+      a {
+        @include breakpoint(tablet) {
+          text-transform: uppercase;
+          color: $orange;
+        }
+      }
+    }
+
+    .meta-head {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    .post-byline {
+      border-top: 1px dotted gray;
+      border-bottom: 1px dotted gray;
+      font-weight: 700;
+      line-height: $line-height;
+      max-width: 40rem;
+      margin-bottom: 1rem;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 0;
+      }
+
+      .byline {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include breakpoint(tablet) {
+          flex-direction: row;
+        }
+      }
+    }
+
+    h2 {
+      padding: 0;
+    }
+  }
+
+  .content {
+    display: block;
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: minmax(30rem, 40rem) minmax(10rem, 20rem);
+      grid-template-areas: "post-header post-header" "post-content ." "post-sidebar .";
+      grid-gap: 1rem;
+
+      /* max-width: 40rem; */
+
+      header {
+        grid-area: post-header;
+        max-width: 40rem;
+      }
+
+      article.post {
+        div.entry-content {
+          grid-area: post-content;
+        }
+      }
+
+      aside.sidebar {
+        grid-area: post-sidebar;
+
+        .sidebar-content {
+          background-color: rgba($gray, 0.4);
+
+          section.widget {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(laptop) {
+      grid-template-columns: minmax(30rem, 40rem) minmax(10rem, 20rem);
+      grid-template-areas: "post-header post-header" "post-content post-sidebar";
+      grid-gap: 1rem;
+    }
   }
 }

@@ -41,7 +41,9 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/advanced-custom-fields-font-awesome": "^2.1",
     "wpackagist-plugin/better-font-awesome": "^1.7",
-    "afragen/github-updater": "^8.2"
+    "afragen/github-updater": "^8.2",
+    "wpackagist-plugin/wordpress-seo": "^8.2",
+    "wpackagist-plugin/akismet": "^4.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
