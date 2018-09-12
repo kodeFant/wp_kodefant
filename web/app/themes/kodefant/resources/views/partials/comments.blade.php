@@ -11,7 +11,13 @@ if (post_password_required()) {
     </h2>
 
     <ol class="comment-list">
-      {!! wp_list_comments(['style' => 'ol', 'short_ping' => true, 'avatar_size' => 64]) !!}
+      {{-- {!! wp_list_comments(['style' => 'ol', 'short_ping' => true, 'avatar_size' => 64]) !!} --}}
+      {!! wp_list_comments(
+        [
+        'type'=>'comment',
+        'callback'=>'kodeFant_comment',
+        'avatar_size' => 64
+        ] ) !!}
     </ol>
 
     @if (get_comment_pages_count() > 1 && get_option('page_comments'))

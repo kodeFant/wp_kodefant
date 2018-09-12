@@ -31,7 +31,8 @@
 }
 
 .comment-reply-link,
-.comment-edit-link {
+.comment-edit-link,
+.submit {
   -moz-box-shadow: inset 0 1px 0 0 #fff;
   -webkit-box-shadow: inset 0 1px 0 0 #fff;
   box-shadow: inset 0 1px 0 0 #fff;
@@ -58,7 +59,8 @@
 }
 
 .comment-reply-link:hover,
-.comment-edit-link:hover {
+.comment-edit-link:hover,
+.submit:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #fff));
   background: -moz-linear-gradient(top, #f6f6f6 5%, #fff 100%);
   background: -webkit-linear-gradient(top, #f6f6f6 5%, #fff 100%);
@@ -69,7 +71,8 @@
 }
 
 .comment-reply-link:active,
-.comment-edit-link:active {
+.comment-edit-link:active,
+.submit:active {
   position: relative;
   top: 1px;
 }
