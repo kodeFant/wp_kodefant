@@ -16,15 +16,6 @@
       font-weight: 300;
     }
 
-    .post-meta-category {
-      a {
-        @include breakpoint(tablet) {
-          text-transform: uppercase;
-          color: $orange;
-        }
-      }
-    }
-
     .meta-head {
       @include breakpoint(tablet) {
         display: none;
@@ -38,9 +29,24 @@
       line-height: $line-height;
       max-width: 40rem;
       margin-bottom: 1rem;
+      color: $dark-gray;
 
       @include breakpoint(tablet) {
         margin-bottom: 0;
+      }
+
+      .post-meta-category {
+        a {
+          @include breakpoint(tablet) {
+            text-transform: uppercase;
+            color: inherit;
+          }
+
+          &:hover,
+          &:active {
+            color: $orange;
+          }
+        }
       }
 
       .byline {
@@ -64,7 +70,7 @@
 
     @include breakpoint(tablet) {
       display: grid;
-      grid-template-columns: minmax(30rem, 40rem) minmax(10rem, 20rem);
+      grid-template-columns: minmax(30rem, 40rem) minmax(10rem, auto);
       grid-template-areas: "post-header post-header" "post-content ." "post-sidebar .";
       grid-gap: 1rem;
 
@@ -86,6 +92,7 @@
 
         .sidebar-content {
           background-color: rgba($gray, 0.4);
+          max-width: 20rem;
 
           section.widget {
             padding: 1rem;
@@ -95,7 +102,6 @@
     }
 
     @include breakpoint(laptop) {
-      grid-template-columns: minmax(30rem, 40rem) minmax(10rem, 20rem);
       grid-template-areas: "post-header post-header" "post-content post-sidebar";
       grid-gap: 1rem;
     }
