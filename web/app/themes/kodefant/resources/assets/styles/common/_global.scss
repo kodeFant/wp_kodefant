@@ -130,3 +130,12 @@ footer {
   }
 }
 
+::selection {
+  background: $black;
+  color: $orange;
+}
+
+::-moz-selection {
+  background: $black;
+  color: $orange;
+}
