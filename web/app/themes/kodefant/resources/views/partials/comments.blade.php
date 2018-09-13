@@ -16,7 +16,8 @@ if (post_password_required()) {
         [
         'type'=>'comment',
         'callback'=>'kodeFant_comment',
-        'avatar_size' => 64
+        'avatar_size' => 64,
+        'max_depth' => 4
         ] ) !!}
     </ol>
 

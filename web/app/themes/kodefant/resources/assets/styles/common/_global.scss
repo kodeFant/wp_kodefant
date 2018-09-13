@@ -131,6 +131,18 @@ footer {
   }
 }
 
+.mobile-hidden {
+  @include breakpoint(mobileonly) {
+    display: none !important;
+  }
+}
+
+.desktop-hidden {
+  @include breakpoint(phablet) {
+    display: none !important;
+  }
+}
+
 ::selection {
   background: $black;
   color: $orange;
