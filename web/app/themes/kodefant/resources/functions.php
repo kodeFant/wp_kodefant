@@ -165,3 +165,8 @@ function kodeFant_comment($comment, $args, $depth)
         <?php
         endif;
 }
+
+function posts_ingress()
+{
+    return get_field('posts_ingress');
+}

@@ -50,4 +50,8 @@ BREAKPOINTS
   @else if $point == mobileonly {
     @media (max-width: 37.5em) { @content ; }
   }
+
+  @else if $point == smallmobileonly {
+    @media (max-width: 25em) { @content ; }
+  }
 }

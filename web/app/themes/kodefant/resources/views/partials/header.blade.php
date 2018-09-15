@@ -11,7 +11,7 @@
 </header>
 <div class ="mobile-button-container desktop-hidden">
   <div class="mobile-button">
-    <i class="fa fa-bars" aria-hidden="true"></i> @php _e('Meny') @endphp
+    <i class="fa fa-bars" aria-hidden="true"></i> @php _e('MENY') @endphp
   </div>
 </div>
 

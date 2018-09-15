@@ -277,7 +277,7 @@ header.banner {
   z-index: 2;
   background: rgba($black, 0.95);
   color: $dark-orange;
-  font-family: $header-font;
+  font-family: $main-font;
   overflow: hidden;
   padding: 0.4rem 0.6rem;
   text-align: right;
@@ -286,6 +286,10 @@ header.banner {
   .mobile-button {
     font-size: 1.5rem;
     padding: 0;
+
+    @include breakpoint(smallmobileonly) {
+      font-size: 2rem;
+    }
 
     @include breakpoint(phablet) {
       display: none;
