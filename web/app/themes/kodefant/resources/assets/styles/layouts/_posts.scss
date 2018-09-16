@@ -117,3 +117,8 @@
   margin-bottom: 1rem;
   color: $dark-gray;
 }
+
+.previous-and-next {
+  display: flex;
+  justify-content: space-between;
+}

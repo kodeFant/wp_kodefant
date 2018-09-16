@@ -1,7 +1,7 @@
 
 <div class="byline author vcard">
   <div class="post-meta">
-  {{ __('Av', 'sage') }} <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
+  {{ __('By', 'sage') }} <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
     {{ get_the_author() }}
   </a>
   </div>

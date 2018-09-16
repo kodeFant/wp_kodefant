@@ -8,7 +8,7 @@
           <blockquote>{{ __('Jeg er fortapt! hvisker jeg for mig selv: mine damer og herrer, jeg er fortapt!') }}<cite><q>Sult</q>, Knut Hamsun</cite></blockquote>
         <h1>404</h1>
         <div class="nf404-text">
-          <p>{{ __('Siden du prøver å finne eksisterer ikke her.', 'sage') }}</p>
+          <p>{{ __('The page you are trying to find does not exist.', 'sage') }}</p>
           {!! get_search_form(false) !!}
         </div>
       </div>

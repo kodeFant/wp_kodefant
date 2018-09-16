@@ -1,6 +1,8 @@
+{{-- Blog Post --}}
 <article @php post_class() @endphp>
   <div class="entry-content">
     @php the_content() @endphp
+    <div class="previous-and-next"><p>@php previous_post_link() @endphp</p><p>@php next_post_link() @endphp</p></div>
   </div>
   <footer>
     <div class="tags">

@@ -93,7 +93,8 @@ header.banner {
     }
 
     // The Main Menu unordered list
-    ul#menu-main-nav {
+    ul#menu-main-nav,
+    ul#menu-main-english {
       display: flex;
       flex-direction: column;
 
@@ -238,7 +239,8 @@ header.banner {
   }
 }
 
-.menu-main-nav-container {
+.menu-main-nav-container,
+.menu-main-english-container {
   @include breakpoint(mobileonly) {
     width: 100%;
     text-align: center;
